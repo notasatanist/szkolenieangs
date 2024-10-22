@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div id="results"></div>
+    <script>
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const query = getQueryParameter('q');
+
+        if (query) {
+            const appId = 'id'; 
+            const apiKey = 'key'; 
+            const apiUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${appId}&app_key=${apiKey}`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => displayResults(data.hits))
+                .catch(error => console.error('Error:', error));
+        } else {
+            document.getElementById('results').textContent = 'No search term provided.';
+        }
+        document.querySelectorAll('.tags').forEach(tag => {
+            tag.addEventListener('click', function() {
+                const query = this.getAttribute('data-query');
+                window.location.href = `results.html?q=${query}`;
+            });
+        });
+        
+        function displayResults(recipes) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = ''; 
+
+            if (recipes.length > 0) {
+                recipes.forEach(hit => {
+                    const recipe = hit.recipe;
+                    const recipeItem = document.createElement('div');
+                    recipeItem.innerHTML = `
+                        <h3>${recipe.label}</h3>
+                        <img src="${recipe.image}" alt="${recipe.label}" width="100">
+                        <p><a href="${recipe.url}" target="_blank">View Recipe</a></p>
+                    `;
+                    resultsDiv.appendChild(recipeItem);
+                });
+            } else {
+                resultsDiv.textContent = 'No results found.';
+            }
+        };
+        
+            
+    </script>
+</body>
+</html>

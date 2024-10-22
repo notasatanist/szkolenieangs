@@ -1,0 +1,79 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+.reg {
+    display: flex;
+    margin-left: 45px;
+    font-family: Audiowide;
+    background: darkcyan;
+    padding: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: auto; 
+    height: auto;
+    font-size: 20px;
+    color: azure;
+    cursor: pointer;
+}
+/* The Modal (background) */
+.login-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.582); 
+}
+   /* Modal Content/Box */
+.login-modal-content {
+    font-family: Trirong;
+    font-size: 20px;
+    background: rgb(64, 224, 208);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid #fffbfb;
+    width: 25%;
+    flex-direction: column;
+    border-radius: 10px;
+}
+#regemail,
+#regpassword,
+#pw-repeat,
+#login-email,
+#login-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    position: relative;
+    height: 25px;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    min-width: 350px;
+}
+.cancelbtn,
+.signupbtn,
+.loginbtn {
+    background: darkcyan;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: azure;
+    cursor: pointer;
+    font-family: Audiowide;
+}
+.close-login {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}

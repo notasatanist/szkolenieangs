@@ -1,0 +1,62 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+.navbar {
+    background: teal;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.nav,
+#nav {
+    padding: 20px;
+    text-decoration: none;
+    font-family: Audiowide;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 5px 5px rgba(0, 139, 139, 0.404);
+    margin-left: 50px;
+}
+.nav:hover {
+    background-color: turquoise;
+    text-shadow: 5px 5px rgba(0, 139, 139, 0.404);
+}
+.dropdown {
+    position: relative; 
+}
+.dropbtn {
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+}
+.cook-icon {
+    align-self: center;
+}
+.dropbtn:hover {
+    background-color: turquoise;
+    text-shadow: 5px 5px rgba(0, 139, 139, 0.404);
+}
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    right: 0; 
+    background-color: teal; 
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+    z-index: 1; 
+    width: auto; 
+}
+.dropdown:hover .dropdown-content {
+    display: block; 
+}
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block; 
+    white-space: nowrap; 
+    color: white; 
+}
+.dropdown-content a:hover {
+    background-color: rgba(64, 224, 208, 0.774); 
+}

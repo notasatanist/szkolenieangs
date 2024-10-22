@@ -1,0 +1,30 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+.popular-users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: Trirong;
+}
+.best-user {
+    margin-right: 15px;
+    padding: 5px;
+    font-size: 25px;
+    text-decoration: underline;
+    background: darkcyan;
+    border-style: dotted;
+    border-radius: 10%;
+    color: azure;
+}
+.user {
+    height: 150px;
+    border-radius: 100px;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+.name {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}

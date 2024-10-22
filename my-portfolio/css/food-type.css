@@ -1,0 +1,30 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+.food-type {
+    font-family: Trirong;
+    margin-top: 80px;
+    display: block;
+    font-size: 20px;
+}
+img {
+    height: 85px;
+    margin-right: 20px;
+}
+.food-tag {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    background: teal;
+    min-height: 120px;
+    padding: 10px;
+    border: 3px;
+    border-color: rgba(0, 63, 63, 0.534);
+    border-radius: 15px;
+    margin: 20px;
+    text-decoration: none; 
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    width: 15%;
+}

@@ -1,0 +1,13 @@
+.carousel-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%; 
+    min-height: 1000px;
+}
+.d-block {
+    width: 1400px;  
+    height: 1200px; 
+    object-fit: cover; 
+}
+  

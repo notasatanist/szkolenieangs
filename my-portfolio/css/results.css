@@ -1,0 +1,22 @@
+body {
+    margin-left: 15%;
+    margin-right: 15%;
+    background: teal;
+}
+h1 {
+    font-family: Sofia;
+    font-size: 60px;
+    text-align: center;
+}
+#results {
+    font-family: Trirong;
+    font-size: 30px;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+}
+img {
+    height: 250px;
+    width: 250px;
+}
